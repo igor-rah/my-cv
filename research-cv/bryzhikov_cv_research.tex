@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,top=0.9cm,bottom=0.7cm,left=1.3cm,right=1.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+
+\definecolor{accent}{RGB}{59,106,160}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% Left date column width, matched to the reference CV
+\newlength{\datecol}\setlength{\datecol}{2.3cm}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  \noindent\makebox[\datecol][r]{\color{accent}\rule[0.25ex]{\datecol}{3pt}}\hspace{6pt}%
+  {\color{accent}\Large #1}\par\vspace{2pt}}
+
+% \cventry{dates}{body}: dates right-aligned in the left column, body in the right
+\newlength{\bodycol}
+\newcommand{\cventry}[2]{%
+  \setlength{\bodycol}{\dimexpr\linewidth-\datecol-6pt\relax}%
+  \noindent\parbox[t]{\datecol}{\raggedleft\small\strut #1}\hspace{6pt}%
+  \parbox[t]{\bodycol}{\strut #2}\par\vspace{2pt}}
+
+\setlist[itemize]{leftmargin=1em,itemsep=0pt,topsep=1pt,parsep=0pt,label=\textbullet}
+
+\begin{document}
+
+% ---------------------------------------------------------------- header
+\begin{minipage}[t]{0.55\linewidth}
+  {\fontsize{27}{29}\selectfont Igor Bryzhikov}\\[4pt]
+  {\Large\itshape\color{gray} Curriculum Vitae}
+\end{minipage}%
+\begin{minipage}[t]{0.45\linewidth}
+  \raggedleft\small
+  \href{mailto:bryzhikoff.i@yahoo.com}{bryzhikoff.i@yahoo.com}\\
+  \href{https://github.com/igor-rah}{github.com/igor-rah}\\
+  Telegram: @ak\_skt47
+\end{minipage}
+
+\vspace{4pt}
+
+% ---------------------------------------------------------------- education
+\cvsection{Education}
+\cventry{2025 -- 2029\\(anticipated)}{%
+  \textbf{Moscow Institute of Physics and Technology}, \textit{Phystech School of Applied Mathematics and Computer Science}, B.Sc.\ in Informatics and Computer Engineering\\
+  \textbf{Relevant coursework:}\\
+  \underline{Mathematics}: Calculus, Multivariable Calculus, Analytic Geometry, Linear Algebra, Differential Equations\\
+  \underline{Computer Science}: Algorithms and Data Structures, C++, Python (advanced course), Software Engineering, Databases and SQL\\
+  \underline{Physics}: Mechanics, Thermodynamics and Molecular Physics, Electricity and Magnetism, Analytical Mechanics\\
+  \textbf{Average Grade:} 8.7/10}
+
+% ---------------------------------------------------------------- research
+\cvsection{Research Experience}
+\cventry{Oct.\ 2026 --\\present}{%
+  \textbf{Research project}, \textit{MIPT}, \textbf{Supervisor:} Prof.\ Alexander V.\ Gasnikov\\
+  Paper in preparation: \textit{``Algorithmic $C^p$-dimensional Lower Bounds: Deterministic Noise in Zeroth-Order Convex Optimization''}. Studying the oracle complexity of gradient-free (zeroth-order) convex optimization when function values are corrupted by deterministic, non-random noise; constructing lower bounds for $C^p$-smooth objectives and comparing them with known upper bounds for finite-difference and smoothing-based methods.}
+
+% ---------------------------------------------------------------- work
+\cvsection{Work Experience}
+\cventry{Jul.\ 2026 --\\Oct.\ 2026}{%
+  \textbf{BI Analyst Intern}, \textit{T-Bank}, Data Security team\\
+  Automated the processes of a team that detects and masks sensitive data in the bank's data warehouse.
+  \begin{itemize}
+    \item Designed and calculated an efficiency metric for automated alert routing to data owners, showing a 24\% reduction in operational load; re-tuned table re-scan prioritisation to meet the quarterly target.
+    \item Built two LLM tools: automated pre-review of Jira tasks (mentor review load down 2.5$\times$) and a hint on masked fields for access requests (time to request down from 9 to 2.75 min).
+  \end{itemize}}
+
+% ---------------------------------------------------------------- projects
+\cvsection{Projects}
+\cventry{Mar.\ 2026 --\\present}{%
+  \textbf{Training-data pipeline for LLMs}, \textit{Data2Use startup}\\
+  Designed the pipeline stages for building LLM training datasets from unstructured corporate data; implemented validation, preprocessing and data-quality analytics (duplicates, gaps, schema errors) with unit tests; cut masking errors by 75\%.}
+\cventry{Nov.\ 2025 --\\present}{%
+  \textbf{Conversational AI companion with a user profile}, \textit{personal project}\\
+  Designed the database schema for model state and the rules for updating it; implemented the backend (Python, SQLite, SQLAlchemy, REST API) with background jobs; covered 78\% of critical endpoints with tests and reduced mean response latency from 340 to 190 ms.}
+\cventry{Feb.\ 2025 --\\Apr.\ 2025}{%
+  \textbf{Real-time threat detection in video streams}, \textit{Russian National Entrepreneurship Olympiad, final}\\
+  Set recognition quality requirements, fine-tuned YOLOv8 CV-model and built an application that processes a live video stream (Python, PyTorch).}
+
+% ---------------------------------------------------------------- honors
+\cvsection{Honors \& Awards}
+\cventry{2025}{\textbf{Final of the Russian National Entrepreneurship Olympiad} (technology track), Finalist}
+\cventry{}{\textbf{Interregional Mathematics Olympiad for School Students} (departmental universities), Prize-winner}
+
+% ---------------------------------------------------------------- extracurricular
+\cvsection{Extracurricular Experience}
+\cventry{Jul.\ 2026 --\\present}{%
+  \textbf{Teacher gratitude platform} (MIPT and Phystech Union): responsible for outreach to former MIPT faculty.}
+\cventry{Oct.\ 2025 --\\present}{%
+  \textbf{``Generation'' mentorship programme}: group mentored by Viktor Kuznetsov, founder of a company with annual revenue of over RUB 180 billion (VseInstrumenti.ru).}
+
+% ---------------------------------------------------------------- skills
+\cvsection{Computer Skills}
+\cventry{Python}{Jupyter, Data Analysis and Visualization (NumPy, Pandas, MatPlotLib), PyTorch, FastAPI}
+\cventry{ML}{LLM, RAG, LoRA fine-tuning, prompt engineering, model evaluation, ML-Infra}
+\cventry{C++}{Object-Oriented Programming, Algorithms and Data Structures, Metaprogramming}
+\cventry{SQL}{Analytical SQL (CTEs, window functions, analytical queries, joins), query optimisation, SQLAlchemy}
+\cventry{Other}{Linux, Git, Bash, Docker, CI/CD, Apache Superset}
+
+\cvsection{Languages}
+\cventry{}{\textbf{Russian} (Native), \textbf{English} (B2 -- Upper-Intermediate)}
+
+\end{document}
