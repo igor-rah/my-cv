@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage[a4paper,top=0.9cm,bottom=0.7cm,left=1.3cm,right=1.5cm]{geometry}
+\usepackage[a4paper,top=0.9cm,bottom=0.7cm,left=1.2cm,right=1.5cm]{geometry}
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -46,14 +46,15 @@
 \end{minipage}
 
 \vspace{4pt}
+\cventry{}{\textbf{Research interests:} zeroth-order and stochastic optimization, optimization under inexact oracles, memory-efficient LLM fine-tuning.}
 
 % ---------------------------------------------------------------- education
 \cvsection{Education}
 \cventry{2025 -- 2029\\(anticipated)}{%
   \textbf{Moscow Institute of Physics and Technology}, \textit{Phystech School of Applied Mathematics and Computer Science}, B.Sc.\ in Informatics and Computer Engineering\\
   \textbf{Relevant coursework:}\\
-  \underline{Mathematics}: Calculus, Multivariable Calculus, Analytic Geometry, Linear Algebra, Differential Equations\\
-  \underline{Computer Science}: Algorithms and Data Structures, C++, Python (advanced course), Software Engineering, Databases and SQL\\
+  \underline{Mathematics}: Calculus, Multivariable Calculus, Analytic Geometry, Linear Algebra, Differential Equations, Probability Theory (in progress)\\
+  \underline{Computer Science}: Algorithms and Data Structures, C++, Python (advanced course), Theory of Computation (in progress), Databases and SQL\\
   \underline{Physics}: Mechanics, Thermodynamics and Molecular Physics, Electricity and Magnetism, Analytical Mechanics\\
   \textbf{Average Grade:} 8.7/10}
 
@@ -69,7 +70,7 @@
   \textbf{BI Analyst Intern}, \textit{T-Bank}, Data Security team\\
   Automated the processes of a team that detects and masks sensitive data in the bank's data warehouse.
   \begin{itemize}
-    \item Designed and calculated an efficiency metric for automated alert routing to data owners, showing a 24\% reduction in operational load; re-tuned table re-scan prioritisation to meet the quarterly target.
+    \item Designed an efficiency metric for automated sensitive data-reports alert routing (operational load down 24\%).
     \item Built two LLM tools: automated pre-review of Jira tasks (mentor review load down 2.5$\times$) and a hint on masked fields for access requests (time to request down from 9 to 2.75 min).
   \end{itemize}}
 
@@ -77,35 +78,33 @@
 \cvsection{Projects}
 \cventry{Mar.\ 2026 --\\present}{%
   \textbf{Training-data pipeline for LLMs}, \textit{Data2Use startup}\\
-  Designed the pipeline stages for building LLM training datasets from unstructured corporate data; implemented validation, preprocessing and data-quality analytics (duplicates, gaps, schema errors) with unit tests; cut masking errors by 75\%.}
+  Designed the pipeline stages for building LLM training datasets from unstructured corporate data; implemented validation, preprocessing and data-quality analytics (duplicates, gaps, schema errors) with unit tests.}
 \cventry{Nov.\ 2025 --\\present}{%
   \textbf{Conversational AI companion with a user profile}, \textit{personal project}\\
-  Designed the database schema for model state and the rules for updating it; implemented the backend (Python, SQLite, SQLAlchemy, REST API) with background jobs; covered 78\% of critical endpoints with tests and reduced mean response latency from 340 to 190 ms.}
+  Designed the database schema for model state and the rules for updating it; implemented the backend (Python, SQLite, SQLAlchemy, REST API) with background jobs; covered 78\% of critical endpoints with tests.}
 \cventry{Feb.\ 2025 --\\Apr.\ 2025}{%
   \textbf{Real-time threat detection in video streams}, \textit{Russian National Entrepreneurship Olympiad, final}\\
-  Set recognition quality requirements, fine-tuned YOLOv8 CV-model and built an application that processes a live video stream (Python, PyTorch).}
+  Fine-tuned YOLOv8 for real-time threat detection in video streams (PyTorch).}
 
 % ---------------------------------------------------------------- honors
 \cvsection{Honors \& Awards}
 \cventry{2025}{\textbf{Final of the Russian National Entrepreneurship Olympiad} (technology track), Finalist}
 \cventry{}{\textbf{Interregional Mathematics Olympiad for School Students} (departmental universities), Prize-winner}
 
-% ---------------------------------------------------------------- extracurricular
-\cvsection{Extracurricular Experience}
-\cventry{Jul.\ 2026 --\\present}{%
-  \textbf{Teacher gratitude platform} (MIPT and Phystech Union): responsible for outreach to former MIPT faculty.}
-\cventry{Oct.\ 2025 --\\present}{%
-  \textbf{``Generation'' mentorship programme}: group mentored by Viktor Kuznetsov, founder of a company with annual revenue of over RUB 180 billion (VseInstrumenti.ru).}
-
 % ---------------------------------------------------------------- skills
 \cvsection{Computer Skills}
 \cventry{Python}{Jupyter, Data Analysis and Visualization (NumPy, Pandas, MatPlotLib), PyTorch, FastAPI}
-\cventry{ML}{LLM, RAG, LoRA fine-tuning, prompt engineering, model evaluation, ML-Infra}
+\cventry{ML}{LLM, RAG, LoRA fine-tuning, prompt engineering, model evaluation}
 \cventry{C++}{Object-Oriented Programming, Algorithms and Data Structures, Metaprogramming}
-\cventry{SQL}{Analytical SQL (CTEs, window functions, analytical queries, joins), query optimisation, SQLAlchemy}
-\cventry{Other}{Linux, Git, Bash, Docker, CI/CD, Apache Superset}
+\cventry{Other}{LaTeX, Git, Bash, Docker, CI/CD, Apache Superset}
 
 \cvsection{Languages}
 \cventry{}{\textbf{Russian} (Native), \textbf{English} (B2 -- Upper-Intermediate)}
+
+% ---------------------------------------------------------------- hobbies
+\cvsection{Hobbies}
+\cventry{Music}{Completed a ten-year piano programme at a music school}
+\cventry{Sports}{Member of the MIPT Boxing Team}
+\cventry{Other}{Outreach to former MIPT faculty for the Teacher Gratitude Platform (MIPT \& Phystech Union); member of the ``Generation'' mentorship programme led by Viktor Kuznetsov (founder of VseInstrumenti.ru); volunteering at summer festivals}
 
 \end{document}
